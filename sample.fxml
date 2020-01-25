@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vBox" prefHeight="689.0" prefWidth="1012.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <MenuBar nodeOrientation="RIGHT_TO_LEFT">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="menuBar" mnemonicParsing="false" onAction="#closeApp" text="Close" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Resize">
+               <items>
+                  <MenuItem fx:id="menuBarMax" mnemonicParsing="false" onAction="#maximize" text="Maximize" />
+                  <MenuItem fx:id="menuBarMin" mnemonicParsing="false" onAction="#minimize" text="Minimize" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <VBox alignment="CENTER" fillWidth="false" prefHeight="549.0" prefWidth="1012.0" stylesheets="@styles.css" VBox.vgrow="ALWAYS">
+         <children>
+            <JFXButton fx:id="btnDirectoryChooser" contentDisplay="CENTER" onAction="#setDirectory" prefHeight="71.0" prefWidth="332.0" stylesheets="@styles.css" text="Directory Kiezen: " wrapText="true" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Corbel" size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnRename" contentDisplay="CENTER" onAction="#renameFiles" prefHeight="71.0" prefWidth="332.0" stylesheets="@styles.css" text="Files hernoemen: " wrapText="true" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Corbel" size="24.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="lblDirectory" alignment="CENTER" contentDisplay="CENTER" prefHeight="66.0" prefWidth="920.0" stylesheets="@styles.css" text="Gekozen directory: " wrapText="true" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Corbel" size="18.0" />
+               </font></Label>
+            <JFXComboBox fx:id="cBoxFileType" focusColor="#2c5ef5" nodeOrientation="LEFT_TO_RIGHT" promptText="Bestandstype: " stylesheets="@styles.css" unFocusColor="#32a3ab" VBox.vgrow="ALWAYS" />
+         </children>
+         <padding>
+            <Insets bottom="50.0" left="150.0" right="150.0" top="50.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="CENTER" fillWidth="false" prefHeight="48.0" prefWidth="1013.0">
+         <children>
+            <JFXButton fx:id="btnGithub" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#browse" prefHeight="31.0" prefWidth="150.0" text="GITHUB" textAlignment="CENTER" VBox.vgrow="ALWAYS" />
+            <Label fx:id="lblCopyright" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="315.0" text="Copyright: Yannick Driessens 2020" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Corbel" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</VBox>

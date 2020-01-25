@@ -1,0 +1,68 @@
+#lblDirectory{
+    -fx-text-fill: black;
+}
+
+#btnRename{
+    -jfx-button-type: RAISED;
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-font-family: Century Gothic;
+    -fx-font-size: 24px;
+}
+
+#btnDirectoryChooser{
+    -jfx-button-type: RAISED;
+    -fx-background-color: white;
+    -fx-text-fill: black;
+
+}
+
+.jfx-button{
+    -fx-background-color: white;
+    -jfx-disable-visual-focus: true;
+
+}
+
+.jfx-combo-box{
+    -jfx-focus-color: transparent;
+    -jfx-unfocus-color: transparent;
+    -fx-prompt-text-fill: black;
+    -fx-background-color:
+            #c3c4c4,
+            linear-gradient(#d6d6d6 50%, white 100%),
+            radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230,230,230,0) 50%);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,1;
+}
+.jfx-combo-box:focused {
+    -fx-background-color: rgba(89, 88, 88, 0.93);
+}
+.jfx-combo-box:selected{
+    -fx-background-color: rgba(89, 88, 88, 0.93);
+}
+.jfx-combo-box:hover{
+    -fx-background-color: rgba(89, 88, 88, 0.93);
+}
+
+
+#btnGithub{
+    -fx-background-color:
+            #c3c4c4,
+            linear-gradient(#d6d6d6 50%, white 100%),
+            radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230,230,230,0) 50%);
+    -fx-background-radius: 15;
+    -fx-background-insets: 0,1,1;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+
+
+}
+
+#lblCopyright{
+    -fx-text-fill: black;
+}
+
+
+#vBox{
+    -fx-background-color: rgb(63,71,84);
+}
