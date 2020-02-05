@@ -2,9 +2,11 @@
 Renaming files via JavaFX
 
 Beginner Java File Renamer with input validation and directory chooser. Currently only renames .txt files. will add a way to choose file type soon. 
+Renames files to a specific name with adding leading zero's to each file ( 001,002,003,004,...)
 
-DISCLAIMER: it WILL rename ALL files in the chosen directory and change it to .txt. It won't check if the file is already a .txt, it will NOT check if there are other types but that in the directory.
+It'll rename only the files with the extension selected in the app (default .txt). 
 
-Use at own RISK.
+Use at own risk.
+
 
 Thanks (:
